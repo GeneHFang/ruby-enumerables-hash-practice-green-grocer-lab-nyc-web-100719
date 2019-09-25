@@ -74,7 +74,7 @@ def apply_coupons(cart, coupons)
       cart[n[:item]][:count] -= n[:num]
       #clearance = cart[n[:item]][:clearance]
      clearance = cart[n[:item]][:clearance]
-      temp = n[:item]
+      temp = n[:item].dup
       string = temp.concat(" W/COUPON")
       price = n[:cost] / n[:num]
       count = n[:num]
