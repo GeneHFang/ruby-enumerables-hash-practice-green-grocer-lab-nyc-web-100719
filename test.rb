@@ -75,7 +75,7 @@ def apply_coupons(cart, coupons)
       #clearance = cart[n[:item]][:clearance]
      clearance = cart[n[:item]][:clearance]
       string = n[:item]
-      string = string + " W/COUPON"
+      
       price = n[:cost] / n[:num]
       count = n[:num]
       
@@ -84,15 +84,15 @@ def apply_coupons(cart, coupons)
        # cart.delete(n[:item])
       #end
       
-      if (cart.key?(string))
-        price = cart[string][:price] + price
+      if (cart.key?("#{string} W/COUPON"))
+        price = cart["#{string} W/COUPON"][:price] + price
         
-        count = cart[string][:num] + count
-        cart[string][:price] = price
-        cart[string][:clearance] = clearance,
-        cart[string][:count] =  count
+        count = cart["#{string} W/COUPON"][:num] + count
+        cart["#{string} W/COUPON"][:price] = price
+        cart["#{string} W/COUPON"][:clearance] = clearance,
+        cart["#{string} W/COUPON"][:count] =  count
       else
-        cart[string] = {
+        cart["#{string} W/COUPON"] = {
           price: price,
           clearance: clearance,
           count: count
