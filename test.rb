@@ -86,14 +86,13 @@ def apply_coupons(cart, coupons)
       if (cart.key?("#{string} W/COUPON"))
         price = cart["#{string} W/COUPON"][:price] + price
         
-        count = cart["#{string} W/COUPON"][:num] + count
+        count = cart["#{string} W/COUPON"][:count] + count
         cart["#{string} W/COUPON"][:price] = price
         cart["#{string} W/COUPON"][:clearance] = clearance
         cart["#{string} W/COUPON"][:count] =  count
       else
         cart["#{string} W/COUPON"] = {
           price: price,
-          num:
           clearance: clearance,
           count: count
         }
