@@ -75,6 +75,12 @@ end
 
 def apply_clearance(cart)
   # code here
+  
+  cart.map { |n|
+    
+  
+  }
+  
 end
 
 def checkout(cart, coupons)
