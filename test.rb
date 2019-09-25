@@ -69,12 +69,12 @@ def apply_coupons(cart, coupons)
   newHash = Hash.new
   i = 0
   coupons.map{ |n|
-    
-    if (cart.key?(n[:item]))
-      cart[n[:item]][:count] -= n[:num]
+    string = n[:item]
+    if (cart.key?(string))
+      cart[string][:count] -= n[:num]
       #clearance = cart[n[:item]][:clearance]
-     clearance = cart[n[:item]][:clearance]
-      string = n[:item]
+     clearance = cart[string][:clearance]
+      
       price = n[:cost] / n[:num]
       count = n[:num]
       
