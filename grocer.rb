@@ -55,12 +55,16 @@ def apply_coupons(cart, coupons)
         price = cart[string][:price] + price
         
         count = cart[string][:num] + count
+        cart[string][:price] = price
+        cart[string][:clearance] = clearance,
+        cart[string][:count] =  count
+      else
+        cart[string] = {
+          price: price,
+          clearance: clearance,
+          count: count
+        }
       end
-      
-      cart[string][:price] = price
-      cart[string][:clearance] = clearance,
-      cart[string][:count] =  count
-      
     end
     
   }
