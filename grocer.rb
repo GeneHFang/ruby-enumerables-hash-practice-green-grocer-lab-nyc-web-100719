@@ -102,7 +102,7 @@ def checkout(cart, coupons)
   clearanceCart = apply_clearance(applCouponCart)
   total = 0
   clearanceCart.each_key{ |n|
-  total += clearanceCart[n][:price]
+  total += clearanceCart[n][:price]*clearanceCart[n][:count]
   }
   
   if (total > 100.00)
