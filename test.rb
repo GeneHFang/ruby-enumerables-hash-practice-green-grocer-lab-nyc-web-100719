@@ -29,3 +29,16 @@ def coupons
 		{:item => "CHEESE", :num => 3, :cost => 15.00}
 	]
 end
+
+
+avocado = find_item("AVOCADO")
+coupon = find_coupon("AVOCADO")
+consol_cart = consolidate_cart([avocado, avocado, avocado, avocado, avocado])
+two_coupon_result = apply_coupons(consol_cart, [coupon, coupon])
+
+
+
+
+
+
+
