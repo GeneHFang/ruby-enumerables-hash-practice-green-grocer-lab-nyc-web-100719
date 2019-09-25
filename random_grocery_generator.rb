@@ -14,7 +14,9 @@ def items
 	]
 end
 
+puts "begin this shit\n"
 puts items[coupons[0][:items]][:clearance]
+puts "\nend\n\n\n\n"
 
 def coupons
 	[
