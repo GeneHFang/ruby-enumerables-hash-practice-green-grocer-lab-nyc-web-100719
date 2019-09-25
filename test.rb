@@ -114,7 +114,7 @@ puts "begin here \n\n\n"
 
 concattest = "|\n"
 temp = concattest.clone
-two = concattest.concat("|\n")
+two = temp.concat("|\n")
 puts concattest
 puts two
 puts two_coupon_result
