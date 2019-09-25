@@ -35,14 +35,18 @@ def apply_coupons(cart, coupons)
   # code here
   
   newHash = Hash.new
+  i = 0
+  #coupons.map{ |n|
+  while (i < coupons.length) do 
   
-  coupons.each{ |n| 
+    n = coupons[i]
+    
     if (cart.key?(n[:item]))
       cart[n[:item]][:count] = cart[n[:item]][:count] - n[:num]
       
       string = n[:item].concat(" W/COUPON")
       price = n[:cost] / n[:num]
-      #clearance = cart[n[:item]][:clearance]
+      clearance = cart[n[:item]][:clearance]
       
       #delete if quantity is 0
       if (cart[n[:item]][:count] < 1)
@@ -58,7 +62,9 @@ def apply_coupons(cart, coupons)
       }
     end
     
-  }
+    i+=1
+  end  
+  #}
   
   cart
 end
