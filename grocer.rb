@@ -76,7 +76,11 @@ end
 def apply_clearance(cart)
   # code here
   
-  
+  cart.map{|n|
+    
+    n
+    
+  }
   
 end
 
