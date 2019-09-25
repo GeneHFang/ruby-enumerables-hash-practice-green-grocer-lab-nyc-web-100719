@@ -78,15 +78,22 @@ def apply_clearance(cart)
   newHash = Hash.new
   cart.each_key{|n|
     
-    newHash[n][:count] = cart[n][:count]
+    newHash[n]= {
+      count: cart[n][:count],
+      clearance: cart[n][:clearance]
+    }
     
     if (cart[n][:clearance])
       newPrice = cart[n][:price] * 0.8
-      newPrice.round(2)
+      newPrice = newPrice.round(2)
+      newHash[n][:price] = newPrice
+    else
+      newHash[n][:price] = cart[n][:price]
+    end
     
     
   }
-  
+  newHash
 end
 
 def checkout(cart, coupons)
