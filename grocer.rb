@@ -49,7 +49,7 @@ def apply_coupons(cart, coupons)
       price = n[:cost] / n[:num]
      
       
-      delete if quantity is 0
+      #delete if quantity is 0
       if (cart[n[:item]][:count] < 1)
         cart.delete(n[:item])
       end
