@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
   newHash = Hash.new
   
   coupons.map{ |n| 
-    if cart.key?(n[:item])
+    if (cart).key?(n[:item]))
       cart[n[:item]][:count]-= n[:num]
       
       string = n[:item].concat(" W/COUPON")
