@@ -25,7 +25,7 @@ def coupons
 end
 
 puts "begin this shit\n"
-puts items[coupons[0][:items]][:clearance]
+puts items["AVOCADO"][:clearance]
 puts "\nend\n\n\n\n"
 
 def generate_cart
