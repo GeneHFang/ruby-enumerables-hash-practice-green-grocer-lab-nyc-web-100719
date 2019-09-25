@@ -75,7 +75,6 @@ def apply_coupons(cart, coupons)
       #clearance = cart[n[:item]][:clearance]
      clearance = cart[n[:item]][:clearance]
       string = n[:item]
-      
       price = n[:cost] / n[:num]
       count = n[:num]
       
