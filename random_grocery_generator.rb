@@ -40,9 +40,7 @@ coupons = [
 		{:item => "BEER", :num => 2, :cost => 20.00},
 		{:item => "CHEESE", :num => 3, :cost => 15.00}
 	]
-puts "begin this shit\n"
-puts items[0][coupons[0][:item]][:clearance]
-puts "\nend\n\n\n\n"
+
 
 def generate_cart
 	[].tap do |cart|
