@@ -51,7 +51,7 @@ def apply_coupons(cart, coupons)
       #end
       
       if (cart.key?("#{string} W/COUPON"))
-        price = cart["#{string} W/COUPON"][:price] + price
+        #price = cart["#{string} W/COUPON"][:price] + price
         
         count = cart["#{string} W/COUPON"][:count] + count
         cart["#{string} W/COUPON"][:price] = price
