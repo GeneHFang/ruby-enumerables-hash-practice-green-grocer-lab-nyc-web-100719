@@ -24,20 +24,8 @@ def coupons
 	]
 end
 
-[
-		{"AVOCADO" => {:price => 3.00, :clearance => true}},
-		{"KALE" => {:price => 3.00, :clearance => false}},
-		{"BLACK_BEANS" => {:price => 2.50, :clearance => false}},
-		{"ALMONDS" => {:price => 9.00, :clearance => false}},
-		{"TEMPEH" => {:price => 3.00, :clearance => true}},
-		{"CHEESE" => {:price => 6.50, :clearance => false}},
-		{"BEER" => {:price => 13.00, :clearance => false}},
-		{"PEANUTBUTTER" => {:price => 3.00, :clearance => true}},
-		{"BEETS" => {:price => 2.50, :clearance => false}}
-	]
-
 puts "begin this shit\n"
-puts items["AVOCADO"][:clearance]
+puts items[0][coupons[0][:items]][:clearance]
 puts "\nend\n\n\n\n"
 
 def generate_cart
