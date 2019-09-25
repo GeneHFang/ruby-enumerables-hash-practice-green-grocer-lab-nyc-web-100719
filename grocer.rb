@@ -35,7 +35,7 @@ def apply_coupons(cart, coupons)
   # code here
   coupons.map{ |n| 
     if cart.key?(n[:item])
-      
+      cart
     
   }
 end
