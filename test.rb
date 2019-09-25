@@ -113,6 +113,7 @@ two_coupon_result = apply_coupons(consol_cart, [coupon, coupon])
 puts "begin here \n\n\n"
 
 concattest = "|\n"
+temp = concattest.clone
 two = concattest.concat("|\n")
 puts concattest
 puts two
