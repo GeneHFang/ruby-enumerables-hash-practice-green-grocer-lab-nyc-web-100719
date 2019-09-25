@@ -68,7 +68,6 @@ def apply_coupons(cart, coupons)
     
   }
   
-  cart
   
   cart
 end
@@ -98,4 +97,14 @@ end
 
 def checkout(cart, coupons)
   # code here
+  consolCart = consolidate_cart(cart)
+  applCouponCart = apply_coupons(consolCart,coupons)
+  clearanceCart = apply_clearance(applCouponCart)
+  total = 0
+  clearanceCart.each_key{ |n|
+  total += clearanceCart[n][:price]
+  }
+  
+  total
+  
 end
