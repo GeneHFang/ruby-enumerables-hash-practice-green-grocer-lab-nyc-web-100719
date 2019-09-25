@@ -35,7 +35,12 @@ def apply_coupons(cart, coupons)
   # code here
   coupons.map{ |n| 
     if cart.key?(n[:item])
-      cart[n[:item]][:count]-=1
+      cart[n[:item]][:count]-= n[:num]
+      
+      string = n[:item].concat(" W/COUPON")
+      price = n[:cost] / n[:num]
+      
+      cart[string]
       
     
   }
