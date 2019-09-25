@@ -75,10 +75,15 @@ end
 
 def apply_clearance(cart)
   # code here
-  
+  newHash = Hash.new
   cart.map{|n|
     
-    n
+    newHash[n] = {
+      count: cart[n]
+    }
+    
+    if n
+    
     
   }
   
