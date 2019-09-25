@@ -57,11 +57,10 @@ def apply_coupons(cart, coupons)
         count = cart[string][:num] + count
       end
       
-      cart[string] = {
-        price: price,
-        clearance: clearance,
-        count: count
-      }
+      cart[string][:price] = price
+      cart[string][:clearance] = clearance,
+      cart[string][:count] =  count
+      
     end
     
   }
