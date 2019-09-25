@@ -105,6 +105,10 @@ def checkout(cart, coupons)
   total += clearanceCart[n][:price]
   }
   
+  if (total > 100.00)
+    total = (total*0.9).round(2)
+  end
+  
   total
   
 end
