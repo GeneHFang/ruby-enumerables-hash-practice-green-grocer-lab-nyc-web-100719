@@ -111,6 +111,11 @@ consol_cart = consolidate_cart([avocado, avocado, avocado, avocado, avocado])
 two_coupon_result = apply_coupons(consol_cart, [coupon, coupon])
 
 puts "begin here \n\n\n"
+
+concattest = "|\n"
+two = concattest.concat("|\n")
+puts concattest
+puts two
 puts two_coupon_result
 
 
