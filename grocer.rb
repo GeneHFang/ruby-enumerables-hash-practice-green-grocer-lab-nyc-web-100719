@@ -82,7 +82,7 @@ def apply_clearance(cart)
     
     if (cart[n][:clearance])
       newPrice = cart[n][:price] * 0.8
-      newPrice.round()
+      newPrice.round(2)
     
     
   }
