@@ -108,6 +108,8 @@ avocado = find_item("AVOCADO")
 coupon = find_coupon("AVOCADO")
 consol_cart = consolidate_cart([avocado, avocado, avocado, avocado, avocado])
 two_coupon_result = apply_coupons(consol_cart, [coupon, coupon])
+
+puts "begin here \n\n\n"
 puts two_coupon_result
 
 
