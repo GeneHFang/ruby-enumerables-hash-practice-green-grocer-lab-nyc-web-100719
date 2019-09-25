@@ -30,7 +30,7 @@ end
 def apply_coupons(cart, coupons) 
   
   coupons.each { |n| 
-    n.each do |attribute, value| 
+    n.each { |x,y| 
       name = coupon[:item] 
     
       if cart[name] && cart[name][:count] >= coupon[:num] 
@@ -43,7 +43,7 @@ def apply_coupons(cart, coupons)
   
       cart[name][:count] -= coupon[:num] 
     end 
-  end 
+    } 
 }
   cart 
 end
