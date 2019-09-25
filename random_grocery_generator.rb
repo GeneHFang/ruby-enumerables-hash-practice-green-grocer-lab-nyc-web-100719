@@ -14,6 +14,8 @@ def items
 	]
 end
 
+puts items[coupons[0][:items]][:clearance]
+
 def coupons
 	[
 		{:item => "AVOCADO", :num => 2, :cost => 5.00},
