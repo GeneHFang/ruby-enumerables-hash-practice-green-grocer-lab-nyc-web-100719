@@ -93,6 +93,7 @@ def apply_coupons(cart, coupons)
       else
         cart["#{string} W/COUPON"] = {
           price: price,
+          num:
           clearance: clearance,
           count: count
         }
