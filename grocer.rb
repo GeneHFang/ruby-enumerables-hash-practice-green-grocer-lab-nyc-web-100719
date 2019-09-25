@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
  i = 0
   coupons.map{ |n|
     string = n[:item]
-    if (cart.key?(string))
+    if (cart.key?(string) && cart[string][:count] >= n[:num])
       cart[string][:count] -= n[:num]
       #clearance = cart[n[:item]][:clearance]
      clearance = cart[string][:clearance]
