@@ -81,7 +81,8 @@ def apply_clearance(cart)
     newHash[n][:count] = cart[n][:count]
     
     if (cart[n][:clearance])
-      
+      newPrice = cart[n][:price] * 0.8
+      newPrice.round()
     
     
   }
