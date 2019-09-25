@@ -36,10 +36,10 @@ def apply_coupons(cart, coupons)
   
   newHash = Hash.new
   i = 0
-  #coupons.map{ |n|
-  while (i < coupons.length) do 
+  coupons.map{ |n|
+  #while (i < coupons.length) do 
   
-    n = coupons[i]
+    #n = coupons[i]
     
     if (cart.key?(n[:item]))
       cart[n[:item]][:count] = cart[n[:item]][:count] - n[:num]
@@ -63,9 +63,9 @@ def apply_coupons(cart, coupons)
       }
     end
     
-    i+=1
-  end  
-  #}
+   # i+=1
+  #end  
+  }
   
   cart
 end
