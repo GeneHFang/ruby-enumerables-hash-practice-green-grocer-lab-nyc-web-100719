@@ -34,16 +34,14 @@ end
 def apply_coupons(cart, coupons)
   # code here
   
-  newHash = Hash.new
-  i = 0
+ i = 0
   coupons.map{ |n|
-    
-    if (cart.key?(n[:item]))
-      cart[n[:item]][:count] -= n[:num]
+    string = n[:item]
+    if (cart.key?(string))
+      cart[string][:count] -= n[:num]
       #clearance = cart[n[:item]][:clearance]
-     clearance = cart[n[:item]][:clearance]
-      temp = n[:item]
-      string = temp.concat(" W/COUPON")
+     clearance = cart[string][:clearance]
+      
       price = n[:cost] / n[:num]
       count = n[:num]
       
@@ -52,15 +50,15 @@ def apply_coupons(cart, coupons)
        # cart.delete(n[:item])
       #end
       
-      if (cart.key?(string))
-        price = cart[string][:price] + price
+      if (cart.key?("#{string} W/COUPON"))
+        price = cart["#{string} W/COUPON"][:price] + price
         
-        count = cart[string][:num] + count
-        cart[string][:price] = price
-        cart[string][:clearance] = clearance,
-        cart[string][:count] =  count
+        count = cart["#{string} W/COUPON"][:count] + count
+        cart["#{string} W/COUPON"][:price] = price
+        cart["#{string} W/COUPON"][:clearance] = clearance
+        cart["#{string} W/COUPON"][:count] =  count
       else
-        cart[string] = {
+        cart["#{string} W/COUPON"] = {
           price: price,
           clearance: clearance,
           count: count
@@ -69,6 +67,8 @@ def apply_coupons(cart, coupons)
     end
     
   }
+  
+  cart
   
   cart
 end
