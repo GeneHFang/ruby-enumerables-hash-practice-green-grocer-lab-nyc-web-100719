@@ -53,6 +53,7 @@ def apply_coupons(cart, coupons)
         clearance: clearance,
         count: n[:num]
       }
+    end
     
   }
   
